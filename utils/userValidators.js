@@ -15,10 +15,10 @@ class UserValidator {
         if(passwordValidationResult) {
             validationErrors.push(passwordValidationResult);
         }
-
+        
         //if more validators added, better replace with loop
 
-
+        return validationErrors;
 
     }
 }
@@ -51,6 +51,7 @@ function validatePassword(req) {
         return passwordValidationError;
     }
 }
+module.exports = new UserValidator();
 //////////////////////////////
 //////////////////////////////
 //////////////////////////////

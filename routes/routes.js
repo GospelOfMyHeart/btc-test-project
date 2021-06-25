@@ -6,7 +6,7 @@ module.exports = function(app) {
       .get(user.loginUser);
 
     app.route('/user/create')
-      .get(user.createUser);
+      .post(user.createUser);
 
     app.route('/btcRate')
       .get(btc.getBtcToUah);

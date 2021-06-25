@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const usersDbFilePath = "files/userDb.txt"
 const hash = require("password-hash");
-const { pathToFileURL } = require("url");
 class UserDb {
 
     constructor() {
@@ -32,7 +31,7 @@ class UserDb {
         users.push(newUser);
 
         // //in case if we didn`t have any data in database and array won`t reference to "database", we should assign it explicitly
-        fs.writeFileSync(pathToFileURL, JSON.stringify(db));
+        fs.writeFileSync(usersDbFilePath, JSON.stringify(db));
         return true;
         
     }
