@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "12548ff6-63ca-4bb8-b6a6-ef52da7a1c27",
+		"name": "Btc API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sample1234@gmail.com\",\r\n    \"password\":\"12341234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3020/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3020",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "Login as user"
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sample1234@gmail.com\",\r\n    \"password\":\"12341234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3020/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3020",
+					"path": [
+						"user",
+						"create"
+					]
+				},
+				"description": "Login user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get btc rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3020/btcRate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3020",
+					"path": [
+						"btcRate"
+					]
+				},
+				"description": "Getting btc rate. For authorized users only."
+			},
+			"response": []
+		}
+	]
+}
