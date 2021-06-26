@@ -3,7 +3,7 @@ module.exports = function(app) {
     var btc = require('../controller/btc.js');
 
     app.route('/user/login')
-      .get(user.loginUser);
+      .post(user.loginUser);
 
     app.route('/user/create')
       .post(user.createUser);

@@ -21,6 +21,11 @@ class UserValidator {
         return validationErrors;
 
     }
+
+    validateLoginCreds(req) {
+        //because we have similar input for both requests, we can use this to avoid code duplication
+        return this.validateRegistartionCreds(req);
+    }
 }
 
 //////////////////////////////
