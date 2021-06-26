@@ -4,6 +4,7 @@ const { UserDb } = require("../utils/userDb.js");
 const { BaseError } = require("../utils/error.js");
 exports.createUser = function(req,res) {
     var response = new UserCreateResponse();
+
     var validationResult = userValidator.validateRegistartionCreds(req);
 
     //validating user input
